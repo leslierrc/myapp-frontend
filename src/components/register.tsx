@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { EyeOff, Eye } from 'lucide-react';
-
+const API_URL = import.meta.env.VITE_API_URL;
 interface Particle {
   left: number;
   top: number;
@@ -30,7 +30,7 @@ export const Register = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/auth/register', {
+      await axios.post(`${API_URL}/auth/register`, {
         username,
         password,
       });

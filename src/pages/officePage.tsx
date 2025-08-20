@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Edit, Trash2, Search, XCircle, Loader2, Building, Replace } from 'lucide-react';
+import { Plus, Edit, Trash2, Search, XCircle, Loader2, Replace } from 'lucide-react';
 const API_URL = import.meta.env.VITE_API_URL;
 
 interface Asset {

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { SocialLoginBar } from './socialButton';
 import { Eye, EyeOff } from 'lucide-react';
-
+const API_URL = import.meta.env.VITE_API_URL;
 interface Particle {
   left: number;
   top: number;
@@ -46,7 +46,7 @@ const Login = () => {
     e.preventDefault();
     if (!validateFields()) return;
     try {
-      const res = await axios.post('http://localhost:3000/auth/login', { username, password });
+      const res = await axios.post(`${API_URL}/auth/login`, { username, password });
       localStorage.setItem('token', res.data.access_token);
       navigate('/home');
     } catch {
