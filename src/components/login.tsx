@@ -55,7 +55,8 @@ const Login = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden" style={{ backgroundImage: "url('../../public/img1.wallspic.com-triangulo-azul-rosa-morado-simetria-3840x3840.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden" 
+    style={{ backgroundImage: "url('/img1.wallspic.com-triangulo-azul-rosa-morado-simetria-3840x3840.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {particles.map((p, i) => (
         <span key={i} className="absolute bg-white rounded-full opacity-50" style={{ left: `${p.left}%`, top: `${p.top}%`, width: `${p.size}px`, height: `${p.size}px`, animation: `floatParticle ${p.duration}s linear infinite` }} />
       ))}
