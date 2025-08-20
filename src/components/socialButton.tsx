@@ -89,11 +89,7 @@ const sharedTransition: React.ComponentProps<typeof motion.div>["transition"] = 
 
 // --- Componente ---
 export const SocialLoginBar = () => {
-  const [isDark, setIsDark] = useState(true);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
+  const [isDark] = useState(true);
 
   return (
   
